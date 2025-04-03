@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: spring-boot-hello-world
+  name: spring-boot-hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-boot-hello-world
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: spring-boot-hello-world
+    spec:
+      containers:
+      - image: devanarayanantm/spring-boot-hello-world:latest
+        name: spring-boot-hello-world
